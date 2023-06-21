@@ -1,0 +1,33 @@
+<form style="width: 400px; margin-left: 450px; margin-top: 100px;" [formGroup]="validateForm">
+    <div class="row mb-3">
+        <label for="inputName3" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+            <h1>S'inscrire</h1>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputName3" class="col-sm-3 col-form-label">Nom d'utlisateur:</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputName3" formControlName="name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
+        <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail3" formControlName="email">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-3 col-form-label">Mot de passe: </label>
+        <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword3" formControlName="password">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputConfirmPassword3" class="col-sm-3 col-form-label">Confirmer: </label>
+        <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputConfirmPassword3" formControlName="confirm">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="signUp(this.validateForm.value)">s'inscrire</button>
+</form>

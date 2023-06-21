@@ -1,0 +1,27 @@
+<form style="width: 400px; margin-left: 450px; margin-top: 100px;" [formGroup]="validateForm">
+    <div class="row mb-3">
+        <label for="inputName3" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+            <h1>Ajouter étudiant</h1>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="name" class="col-sm-3 col-form-label">Nom de utilisateur: </label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="nom" class="col-sm-3 col-form-label">Nom: </label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="nom" formControlName="nom">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="prenom" class="col-sm-3 col-form-label">Prénom: </label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="prenom" formControlName="prenom">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addStudent()">Ajouter</button>
+</form>

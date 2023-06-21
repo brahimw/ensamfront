@@ -1,0 +1,28 @@
+<div class="input-group mb-3" style="width: 350px; margin-left: 450px; margin-top: 20px;">
+    <input type="text" class="form-control" formControlName="title" placeholder="Chercher"
+        aria-label="Write username to search" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+        (click)="searchTeacherByName()">Chercher</button>
+</div>
+<ng-container *ngIf="teachers">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Module</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let teacher of teachers">
+                <th scope="row">{{teacher.name}}</th>
+                <td>{{teacher.module}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" routerLink="/teacher/{{teacher.id}}">Changer</button>
+                    <button type="button" class="btn btn-danger" style="margin-left: 10px;"
+                        (click)="deleteTeacher(teacher.id)">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
